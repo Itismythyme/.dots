@@ -1,0 +1,15 @@
+
+//@theme "/usr/share/rofi/themes/gruvbox-light-soft.rasi"
+
+//@theme "/usr/share/rofi/themes/sidebar.rasi"
+
+//@theme "/usr/share/rofi/themes/gruvbox-light.rasi"
+
+//@theme "/usr/share/rofi/themes/sidebar.rasi"
+
+//@theme "~/.config/rofi/themes/sidebarmonochrome.rasi"
+
+
+//@theme "/home/OttoMarine/.config/rofi/themes/AMOLED.rasi"
+
+@theme "/home/OttoMarine/.config/rofi/themes/sidebarmonochrome.rasi"

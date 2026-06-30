@@ -1,0 +1,9 @@
+# Ignore everything in emacs config
+emacs/.emacs.d/*
+
+# But allow init.el
+!emacs/.emacs.d/init.el
+
+# Allow themes directory
+!emacs/.emacs.d/themes/
+!emacs/.emacs.d/themes/**

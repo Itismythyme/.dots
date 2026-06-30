@@ -1,0 +1,47 @@
+*  Personalized Setup (Fedora Sway)
+** Repos
+
+#+begin_src bash
+sudo dnf config-manager addrepo --from-repofile=https://repo.librewolf.net/librewolf.repo
+sudo dnf install -y dnf-plugins-core
+
+sudo dnf install -y \
+  "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm" \
+  "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
+#+end_src
+
+** Installing packages
+
+#+begin_src bash
+# fcitx rime
+sudo dnf install fcitx5 fcitx5-qt fcitx5-gtk2 fcitx5-gtk3 fcitx5-rime fcitx5-configtool -y
+sudo dnf install -y ffmpeg ffmpeg-libs --allowerasing
+#+end_src
+
+** Hibernation Setup (Fedora 43)
+
+#+begin_src bash
+# Calculate swap size (RAM-based formula)
+SWAPSIZE=$(free | awk '/Mem/ {x=$2/1024/1024; printf "%.0fG", (x<2 ? 2*x : x<8 ? 1.5*x : x) }')
+SWAPFILE=/var/swap/swapfile
+
+# Create btrfs subvolume and swap file
+sudo btrfs subvolume create /var/swap
+sudo btrfs filesystem mkswapfile --size $SWAPSIZE --uuid clear $SWAPFILE
+
+# Enable swap file
+echo $SWAPFILE none swap defaults 0 0 | sudo tee --append /etc/fstab
+sudo swapon --all --verbose
+
+# Configure dracut for resume
+echo 'add_dracutmodules+=" resume "' | sudo tee /etc/dracut.conf.d/resume.conf
+sudo dracut --force --verbose
+
+# Fix SELinux permissions (critical!)
+sudo semanage fcontext --add --type swapfile_t $SWAPFILE
+sudo restorecon -RF /var/swap
+
+# Test hibernation
+sudo systemctl hibernate
+#+end_src
+

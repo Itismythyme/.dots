@@ -1,0 +1,5 @@
+theme = noctalia
+shell-integration = fish
+font-family = "Iosevka Term"
+font-size = 14
+confirm-close-surface = false

@@ -1,0 +1,5 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR __fish_initialized:4300
+SETUVAR fish_greeting:
+SETUVAR fish_user_paths:/usr/libexec/docker/cli\x2dplugins\x1e/home/ruixi/Scripts\x1e/home/ruixi/\x2ecargo/bin\x1e/home/ruixi/\x2enpm\x2dglobal/bin\x1e/home/ruixi/\x2elocal/bin

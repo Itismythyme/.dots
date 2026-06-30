@@ -1,0 +1,1 @@
+Place wanted themes or all themes into /usr/share/plymouth/themes

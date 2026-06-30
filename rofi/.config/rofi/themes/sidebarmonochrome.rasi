@@ -1,0 +1,158 @@
+/**
+ * ROFI Color theme
+ * Monochrome Sidebar (default spacing)
+ */
+
+* {
+    text-color: #828282;
+    background-color: rgba(0,0,0,0);
+
+    dark: #111111;
+
+    // Black
+    black: #191919;
+    lightblack: #3c3c3c;
+
+    // Red
+    red: #dddddd;
+    lightred: #dddddd;
+
+    // Green
+    green: #cccccc;
+    lightgreen: #cccccc;
+
+    // Yellow
+    yellow: #aaaaaa;
+    lightyellow: #aaaaaa;
+
+    // Blue
+    blue: #a7a7a7;
+    lightblue: #cccccc;
+
+    // Magenta
+    magenta: #dddddd;
+    lightmagenta: #aaaaaa;
+
+    // Cyan
+    cyan: #cccccc;
+    lightcyan: #cccccc;
+
+    // White
+    white: #828282;
+    lightwhite: #ffffff;
+
+    highlight: bold #ffffff;
+}
+
+window {
+    height: 100%;
+    width: 30em;
+    location: west;
+    anchor: west;
+    border: 0px 2px 0px 0px;
+    border-color: @lightblack;
+    text-color: @white;
+}
+
+mode-switcher {
+    border: 2px 0px 0px 0px;
+    border-color: @lightblack;
+    background-color: @black;
+    padding: 4px;
+}
+
+button {
+    background-color: transparent;
+    text-color: @white;
+}
+
+button selected {
+    border-color: @yellow;
+    text-color: @yellow;
+}
+
+inputbar {
+    background-color: @black;
+    text-color: @yellow;
+    padding: 4px;
+    border: 0px 0px 2px 0px;
+    border-color: @lightblack;
+}
+
+prompt {
+    text-color: @yellow;
+}
+
+entry {
+    text-color: @white;
+}
+
+mainbox {
+    expand: true;
+    background-color: #111111ee;
+    spacing: 1em;
+}
+
+listview {
+    padding: 0em 0.4em 0em 1em;
+    dynamic: false;
+    lines: 0;
+}
+
+element {
+    border: 0px;
+    border-radius: 0px;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+}
+
+element normal normal {
+    text-color: @white;
+}
+
+element normal active {
+    text-color: @lightblue;
+}
+
+element normal urgent {
+    text-color: @lightred;
+}
+
+element alternate normal {
+    text-color: @white;
+}
+
+element alternate active {
+    text-color: @lightblue;
+}
+
+element alternate urgent {
+    text-color: @lightred;
+}
+
+element selected normal {
+    background-color: @lightblack;
+    text-color: @lightwhite;
+}
+
+element selected active {
+    background-color: @white;
+    text-color: @dark;
+}
+
+element selected urgent {
+    background-color: @red;
+    text-color: @dark;
+}
+
+error-message {
+    expand: true;
+    background-color: @red;
+    text-color: @dark;
+    border-color: @lightblack;
+    border: 2px;
+    padding: 1em;
+}
