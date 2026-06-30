@@ -109,7 +109,7 @@ ui_scale = 1.1499999999999999
 
     [[shell.session.actions]]
     action = "command"
-    command = "systemctl hibernate"
+    command = "noctalia msg session lock && systemctl hibernate"
     countdown_seconds = 0.0
     enabled = true
     glyph = "weather-moon"
@@ -134,7 +134,7 @@ ui_scale = 1.1499999999999999
     [[shell.session.actions]]
     action = "lock_and_suspend"
     countdown_seconds = 0.0
-    enabled = false
+    enabled = true
     shortcut = "3"
     variant = "default"
 
@@ -142,14 +142,14 @@ ui_scale = 1.1499999999999999
     action = "reboot"
     countdown_seconds = 0.0
     enabled = true
-    shortcut = "3"
+    shortcut = "4"
     variant = "default"
 
     [[shell.session.actions]]
     action = "shutdown"
     countdown_seconds = 0.0
     enabled = true
-    shortcut = "4"
+    shortcut = "5"
     variant = "destructive"
 
     [shell.shadow]
@@ -164,7 +164,8 @@ custom_palette = "MonochromeAMOLED"
 source = "custom"
 
     [theme.templates]
-    builtin_ids = [ "emacs", "gtk3", "gtk4", "ghostty", "sway" ]
+    builtin_ids = [ "emacs", "ghostty", "sway" ]
+    community_ids = [ "zed" ]
 
 [wallpaper]
 enabled = false

@@ -1,7 +1,7 @@
 # Logo key. Use Mod1 for Alt
   set $mod Mod4
 
-  set $ipc noctalia msg
+set $ipc noctalia msg
 
 # Vim Nav
   set $left  h
@@ -11,6 +11,7 @@
 
 ### INCLUDES ########################################
 include /etc/sway/config.d/*
-include ~/.dotfiles/swaysettings/*
+include ~/.dots/swaysettings/*
+
 
 include ~/.config/sway/noctalia
