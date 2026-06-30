@@ -12,3 +12,5 @@
 ### INCLUDES ########################################
 include /etc/sway/config.d/*
 include ~/.dotfiles/swaysettings/*
+
+include ~/.config/sway/noctalia

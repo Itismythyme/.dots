@@ -73,23 +73,23 @@
       (inverse-on-surface "#f5f5f5")
       (inverse-primary "#ffffff")
       (inverse-surface "#000000")
-      ;; Map terminal colors (term0-term15) to available colors
-      (term0 "#000000")
+      ;; ANSI terminal colors
+      (term0 "#080808")
       (term1 "#ffffff")
-      (term2 "#ffffff")
-      (term3 "#f2f2f2")
-      (term4 "#ffffff")
-      (term5 "#b39898")
-      (term6 "#a88989")
+      (term2 "#f5f5f5")
+      (term3 "#e8e8e8")
+      (term4 "#dddddd")
+      (term5 "#f0f0f0")
+      (term6 "#e5e5e5")
       (term7 "#f5f5f5")
       (term8 "#5a5a5a")
       (term9 "#ffffff")
       (term10 "#ffffff")
-      (term11 "#f2f2f2")
+      (term11 "#ffffff")
       (term12 "#ffffff")
-      (term13 "#b39898")
-      (term14 "#a88989")
-      (term15 "#f5f5f5"))
+      (term13 "#ffffff")
+      (term14 "#ffffff")
+      (term15 "#ffffff"))
 
   (custom-theme-set-faces
    'noctalia
@@ -358,4 +358,3 @@
 
 (provide-theme 'noctalia)
 ;;; noctalia-theme.el ends here
-

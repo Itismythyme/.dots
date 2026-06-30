@@ -1,0 +1,95 @@
+{
+  "entries": [
+    {
+      "byte_size": 30,
+      "captured_at_ms": 1782776634944,
+      "data_mime_type": "text/plain;charset=utf-8",
+      "id": "1782776634944-4",
+      "mime_types": [
+        "text/plain;charset=utf-8",
+        "UTF8_STRING",
+        "COMPOUND_TEXT",
+        "TEXT",
+        "text/plain",
+        "STRING"
+      ],
+      "payload_path": "/home/OttoMarine/.local/state/noctalia/clipboard/entries/1782776634944-4.bin",
+      "pinned": false,
+      "text_preview": "which noctalia-greeter-session"
+    },
+    {
+      "byte_size": 121,
+      "captured_at_ms": 1782776487172,
+      "data_mime_type": "text/plain;charset=utf-8",
+      "id": "1782776487172-3",
+      "mime_types": [
+        "text/uri-list",
+        "x-special/gnome-copied-files",
+        "text/plain;charset=utf-8",
+        "UTF8_STRING"
+      ],
+      "payload_path": "/home/OttoMarine/.local/state/noctalia/clipboard/entries/1782776487172-3.bin",
+      "pinned": false,
+      "text_preview": "/home/OttoMarine/.config/noctalia/colorschemes/Monochrome /home/OttoMarine/.config/noctalia/colorschemes/MonochromeAMOLED"
+    },
+    {
+      "byte_size": 8,
+      "captured_at_ms": 1782776460958,
+      "data_mime_type": "text/plain;charset=utf-8",
+      "id": "1782776460958-2",
+      "mime_types": [
+        "text/html",
+        "text/_moz_htmlcontext",
+        "text/_moz_htmlinfo",
+        "text/plain;charset=utf-8",
+        "UTF8_STRING",
+        "COMPOUND_TEXT",
+        "TEXT",
+        "text/plain",
+        "STRING",
+        "text/x-moz-url-priv"
+      ],
+      "payload_path": "/home/OttoMarine/.local/state/noctalia/clipboard/entries/1782776460958-2.bin",
+      "pinned": false,
+      "text_preview": "palettes"
+    },
+    {
+      "byte_size": 15621,
+      "captured_at_ms": 1782775822884,
+      "data_mime_type": "text/plain;charset=utf-8",
+      "id": "1782775822884-2",
+      "mime_types": [
+        "text/plain",
+        "text/plain;charset=utf-8",
+        "TEXT",
+        "STRING",
+        "UTF8_STRING"
+      ],
+      "payload_path": "/home/OttoMarine/.local/state/noctalia/clipboard/entries/1782775822884-2.bin",
+      "pinned": false,
+      "text_preview": "{   \"settingsVersion\": 59,   \"bar\": {     \"barType\": \"simple\",     \"position\": \"top\",     \"monitors\": [],     \"density\": \"default\",     \"showOutline\": false,     \"showCapsule\": false,     \"capsuleOpac"
+    },
+    {
+      "byte_size": 17,
+      "captured_at_ms": 1782775795458,
+      "data_mime_type": "text/plain;charset=utf-8",
+      "id": "1782775795458-1",
+      "mime_types": [
+        "text/html",
+        "text/_moz_htmlcontext",
+        "text/_moz_htmlinfo",
+        "text/plain;charset=utf-8",
+        "UTF8_STRING",
+        "COMPOUND_TEXT",
+        "TEXT",
+        "text/plain",
+        "STRING",
+        "text/x-moz-url-priv",
+        "SAVE_TARGETS"
+      ],
+      "payload_path": "/home/OttoMarine/.local/state/noctalia/clipboard/entries/1782775795458-1.bin",
+      "pinned": false,
+      "text_preview": "noctalia --daemon"
+    }
+  ]
+}
