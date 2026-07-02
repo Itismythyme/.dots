@@ -1,5 +1,8 @@
+[audio]
+sound_volume = 0.0
+
 [bar.default]
-end = [ "network", "volume", "brightness", "battery", "bluetooth", "notifications" ]
+end = [ "temp", "network", "volume", "brightness", "battery", "bluetooth", "notifications" ]
 margin_edge = 0
 margin_ends = 0
 padding = 5
@@ -58,12 +61,29 @@ address = "Brooklyn NY"
 [lockscreen_widgets]
 enabled = false
 schema_version = 2
-widget_order = [ "lockscreen-login-box@eDP-1" ]
+widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-login-box@eDP-1" ]
 
     [lockscreen_widgets.grid]
     cell_size = 16
     major_interval = 4
     visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
+    box_height = 70.0
+    box_width = 400.0
+    cx = 840.0
+    cy = 931.0
+    output = "HDMI-A-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        input_opacity = 1.0
+        input_radius = 6.0
+        show_login_button = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
     box_height = 70.0
@@ -156,11 +176,15 @@ ui_scale = 1.1499999999999999
     alpha = 0.0
 
 [system.monitor]
-enabled = false
+cpu_poll_seconds = 0
+disk_poll_seconds = 0
+memory_poll_seconds = 0
+network_poll_seconds = 0
 
 [theme]
 community_palette = "Lilac AMOLED"
 custom_palette = "MonochromeAMOLED"
+mode = "light"
 source = "custom"
 
     [theme.templates]
