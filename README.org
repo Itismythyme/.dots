@@ -1,4 +1,29 @@
 *  Personalized Setup (Fedora Sway)
+** Dependencies
+
+#+begin_src
+  sway
+  noctalia v5
+ [[https://docs.noctalia.dev/v5/getting-started/installation/?section=fedora#fedora][Fedora install]]
+  
+#+end_src
+
+** Packages
+
+#+begin_src bash
+  # fcitx rime
+  sudo dnf install fcitx5 fcitx5-qt fcitx5-gtk2 fcitx5-gtk3 fcitx5-rime fcitx5-configtool -y
+  sudo dnf install -y ffmpeg ffmpeg-libs --allowerasing
+
+  # packages
+  sudo dnf install -y \
+       emacs \
+       fish \
+       ghostty \
+       kanshi \
+       rofi \
+#+end_src
+
 ** Repos
 
 #+begin_src bash
@@ -8,14 +33,6 @@ sudo dnf install -y dnf-plugins-core
 sudo dnf install -y \
   "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm" \
   "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
-#+end_src
-
-** Installing packages
-
-#+begin_src bash
-# fcitx rime
-sudo dnf install fcitx5 fcitx5-qt fcitx5-gtk2 fcitx5-gtk3 fcitx5-rime fcitx5-configtool -y
-sudo dnf install -y ffmpeg ffmpeg-libs --allowerasing
 #+end_src
 
 ** Hibernation Setup (Fedora 43)
