@@ -2,7 +2,7 @@
 sound_volume = 0.0
 
 [bar.default]
-end = [ "temp", "network", "volume", "brightness", "battery", "bluetooth", "notifications" ]
+end = [ "network", "volume", "brightness", "battery", "bluetooth", "notifications" ]
 margin_edge = 0
 margin_ends = 0
 padding = 5
@@ -178,6 +178,7 @@ ui_scale = 1.1499999999999999
 [system.monitor]
 cpu_poll_seconds = 0
 disk_poll_seconds = 0
+enabled = false
 memory_poll_seconds = 0
 network_poll_seconds = 0
 
