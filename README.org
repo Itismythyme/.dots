@@ -4,8 +4,8 @@
 #+begin_src
   sway
   noctalia v5
- [[https://docs.noctalia.dev/v5/getting-started/installation/?section=fedora#fedora][Fedora install]]
-  
+
+https://docs.noctalia.dev/v5/getting-started/installation/?section=fedora#fedora
 #+end_src
 
 ** Packages
