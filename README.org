@@ -4,8 +4,13 @@
 #+begin_src
   sway
   noctalia v5
+ https://docs.noctalia.dev/v5/getting-started/installation/?section=fedora#fedora
 
-https://docs.noctalia.dev/v5/getting-started/installation/?section=fedora#fedora
+  #mask PPD and enable tlp
+  sudo systemctl disable --now power-profiles-daemon.service
+  sudo systemctl mask power-profiles-daemon.service
+  sudo systemctl enable --now tlp.service
+  sudo systemctl restart tlp.service
 #+end_src
 
 ** Packages

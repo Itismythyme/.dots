@@ -2,13 +2,14 @@
 sound_volume = 0.0
 
 [bar.default]
-end = [ "network", "volume", "brightness", "battery", "bluetooth", "notifications" ]
+end = [ "network", "volume", "battery", "bluetooth", "notifications" ]
 margin_edge = 0
 margin_ends = 0
 padding = 5
 panel_overlap = 0
 radius = 0
 scale = 1.3500000000000001
+shadow = false
 start = [ "workspaces" ]
 
 [battery]
@@ -114,6 +115,7 @@ position_vertical = "top_right"
 [shell]
 clipboard_enabled = false
 font_family = "Iosevka Fixed"
+offline_mode = true
 settings_show_advanced = true
 show_location = false
 time_format = "{: %I:%M %p}"
