@@ -102,6 +102,10 @@ widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-login-box@eDP-1" ]
         input_radius = 6.0
         show_login_button = true
 
+[nightlight]
+temperature_day = 4500
+temperature_night = 2700
+
 [osd]
 orientation = "vertical"
 position = "top_right"
@@ -183,9 +187,9 @@ memory_poll_seconds = 0
 network_poll_seconds = 0
 
 [theme]
+builtin = "Ayu"
 community_palette = "Lilac AMOLED"
 custom_palette = "MonochromeAMOLED"
-mode = "light"
 source = "custom"
 
     [theme.templates]
