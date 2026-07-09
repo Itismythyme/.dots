@@ -2,7 +2,7 @@
 sound_volume = 0.0
 
 [bar.default]
-end = [ "network", "volume", "battery", "bluetooth", "notifications" ]
+end = [ "tray", "network", "volume", "battery", "bluetooth", "notifications" ]
 margin_edge = 0
 margin_ends = 0
 padding = 5

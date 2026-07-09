@@ -89,6 +89,9 @@ global-auto-revert-non-file-buffers t)
 (auto-save-visited-mode 1)     ;; Auto-save files at an interval
 (global-visual-line-mode 1)    ;; Visually wrap long lines in all buffers
 (global-auto-revert-mode 1)    ;; Refresh buffers with changed local files
+(setq inhibit-startup-screen t)
+(menu-bar-mode -1)
+(tool-bar-mode -1)
 
 ;; ----- Line numbers in left margin -----
 (global-display-line-numbers-mode 1)
@@ -139,9 +142,9 @@ global-auto-revert-non-file-buffers t)
 
 (set-face-attribute 'default nil
                     :family "Iosevka Term"
-                    :height 160)
+                    :height 120)
 
-(add-to-list 'default-frame-alist '(font . "Iosevka Term-16"))
+(add-to-list 'default-frame-alist '(font . "Iosevka Term-12"))
 
 
 (custom-set-variables
@@ -156,3 +159,6 @@ global-auto-revert-non-file-buffers t)
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(add-to-list 'load-path "~/emacs-libvterm/")
+(require 'vterm)
