@@ -195,8 +195,7 @@ custom_palette = "MonochromeAMOLED"
 source = "custom"
 
     [theme.templates]
-    builtin_ids = [ "emacs", "ghostty", "sway" ]
-    community_ids = [ "zed" ]
+    builtin_ids = [ "alacritty", "emacs", "mango" ]
 
 [wallpaper]
 enabled = false
