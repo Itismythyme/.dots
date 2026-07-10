@@ -11,6 +11,8 @@
   sudo systemctl mask power-profiles-daemon.service
   sudo systemctl enable --now tlp.service
   sudo systemctl restart tlp.service
+
+MOZ_ENABLE_WAYLAND=1 on librewolf
 #+end_src
 
 ** Packages
