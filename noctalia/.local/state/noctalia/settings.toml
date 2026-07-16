@@ -108,9 +108,14 @@ temperature_day = 4500
 temperature_night = 2700
 
 [osd]
-orientation = "vertical"
-position = "top_right"
+position = "bottom_center"
 position_vertical = "top_right"
+
+    [osd.kinds]
+    caffeine = false
+    lock_keys = false
+    media = false
+    power_profile = false
 
 [shell]
 clipboard_enabled = false

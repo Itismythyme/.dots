@@ -1,0 +1,18 @@
+# noctalia
+exec-once=noctalia
+
+# emacs
+exec-once=emacs --daemon
+# T14 bind
+bind=XF86FAVORITES,exec,emacsclient -c
+# Logitech K360 keyboard bind
+bind=XF86CALCULATOR,exec emacsclient -c
+
+# Browser
+bind=SUPER,b,spawn,env MOZ_ENABLE_WAYLAND=1 librewolf
+
+# Proton VPN
+assign [app_id="proton.vpn.app.gtk"] 10
+
+# Kanshi (Display Manager)
+exec-once=kanshi

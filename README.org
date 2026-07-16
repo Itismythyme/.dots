@@ -29,6 +29,8 @@ MOZ_ENABLE_WAYLAND=1 on librewolf
        ghostty \
        kanshi \
        rofi \
+
+Installed wev and wlr-randr for input / output recognization
 #+end_src
 
 ** Repos
