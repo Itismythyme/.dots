@@ -1,9 +1,9 @@
-profile docked {
-    output HDMI-A-1 enable position 0,0
+profile {
+    output eDP-1 enable position 0,0 transform normal
+    output "Hewlett Packard HP w2207 CND72508KW" enable position -1050,0 transform 90
+}
+
+profile {
+    output HDMI-A-1 enable position 0,0 transform normal
     output eDP-1 disable
 }
-
-profile laptop {
-    output eDP-1 enable mode 1920x1080 position 0,0
-}
-
