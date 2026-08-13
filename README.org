@@ -18,19 +18,19 @@ MOZ_ENABLE_WAYLAND=1 on librewolf
 ** Packages
 
 #+begin_src bash
-  # fcitx rime
-  sudo dnf install fcitx5 fcitx5-qt fcitx5-gtk2 fcitx5-gtk3 fcitx5-rime fcitx5-configtool -y
-  sudo dnf install -y ffmpeg ffmpeg-libs --allowerasing
+    # fcitx rime
+    sudo dnf install fcitx5 fcitx5-qt fcitx5-gtk2 fcitx5-gtk3 fcitx5-rime fcitx5-configtool -y
+    sudo dnf install -y ffmpeg ffmpeg-libs --allowerasing
 
-  # packages
-  sudo dnf install -y \
-       emacs \
-       fish \
-       ghostty \
-       kanshi \
-       rofi \
+    # packages
+    sudo dnf install -y \
+         emacs \
+         fish \
+         alacritty \
+         kanshi \
+         rofi \
 
-Installed wev and wlr-randr for input / output recognization
+  Installed wev and wlr-randr for input / output recognization
 #+end_src
 
 ** Repos
