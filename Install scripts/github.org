@@ -29,3 +29,7 @@ Host github.com
 
 
 chmod 600 ~/.ssh/config
+
+git remote set-url origin
+
+put the url for the git remote set-url origin
