@@ -88,8 +88,8 @@
 
 ;; ----- Local Packages -----
 
-(add-to-list 'load-path "~/emacs-libvterm/")
-(require 'vterm)
+;; (use-package vterm
+;;     :ensure t)
 
 
 ;; ----- LaTeX -----

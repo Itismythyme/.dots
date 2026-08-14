@@ -5,6 +5,10 @@ set -euo pipefail
 # Dependencies
 # ============================================================
 
+# --- Wifi ---
+
+sudo dnf install iwlwifi-mvm-firmware
+
 # --- Fedora Dependencies ---
 
 sudo dnf install -y dnf-plugins-core
