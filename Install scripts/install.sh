@@ -33,10 +33,12 @@ sudo dnf install -y \
     fish \
     texlive-scheme-full \
     alacritty \
-    kanshi \
-    rofi \
     librewolf
 
+# ============================================================
+# Install ffmpeg
+# ============================================================
+sudo dnf install -y ffmpeg ffmpeg-libs --allowerasing
 
 # ============================================================
 # Input / Output Recognition
@@ -54,7 +56,9 @@ sudo dnf install -y \
 sudo dnf install -y \
     google-noto-fonts-all \
     unifont-fonts \
-    fontconfig
+    fontconfig \
+    google-noto-sans-cjk-fonts \
+    google-noto-serif-cjk-fonts
 
 fc-cache -f
 

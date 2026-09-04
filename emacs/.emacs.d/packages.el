@@ -33,21 +33,22 @@
   (marginalia-mode))
 
 (use-package corfu
-  :init
-  (global-corfu-mode)
-
   :custom
   (corfu-auto t)
   (corfu-auto-delay 0)
   (corfu-auto-prefix 1)
   (corfu-count 10)
-  (corfu-cycle t))
+  (corfu-cycle t)
+
+  :hook (LaTeX-mode . corfu-mode))
+
+(defun my-latex-cape-setup ()
+  (add-to-list 'completion-at-point-functions #'cape-file)
+  (add-to-list 'completion-at-point-functions #'cape-dabbrev))
 
 (use-package cape
   :after corfu
-  :init
-  (add-to-list 'completion-at-point-functions #'cape-file)
-  (add-to-list 'completion-at-point-functions #'cape-dabbrev))
+  :hook (LaTeX-mode . my-latex-cape-setup))
 
 ;; ----- Evil -----
 
@@ -66,6 +67,12 @@
   (setq evil-want-integration t)
   (evil-collection-init))
 
+(use-package treemacs
+  :bind
+  ("C-c t" . treemacs))
+
+(use-package treemacs-evil
+  :after (treemacs evil))
 
 ;; ----- Org -----
 
@@ -99,9 +106,7 @@
   :mode ("\\.tex\\'" . LaTeX-mode)
   :hook ((LaTeX-mode . turn-on-reftex)
          (LaTeX-mode . TeX-fold-mode)
-         (LaTeX-mode . prettify-symbols-mode)
-         (LaTeX-mode . turn-on-cdlatex)
-         (LaTeX-mode . yas-minor-mode))
+         (LaTeX-mode . prettify-symbols-mode))
   :init
   (setq TeX-auto-save t
         TeX-parse-self t
@@ -123,6 +128,7 @@
   (setq TeX-complete-expert-commands t))
 
 
+;; PDF viewer — only loaded when a PDF is opened
 (use-package pdf-tools
   :mode ("\\.pdf\\'" . pdf-view-mode)
   :hook (pdf-view-mode . (lambda ()
@@ -131,14 +137,13 @@
   (pdf-tools-install)
   (setq pdf-view-use-scaling t))
 
-
+;; Fast math input — loaded when LaTeX mode is used
 (use-package cdlatex
   :after tex
   :hook (LaTeX-mode . turn-on-cdlatex))
 
-
+;; Custom snippets — loaded when LaTeX mode is used
 (use-package yasnippet
-  :hook (LaTeX-mode . yas-minor-mode))
-
+  :hook (LaTeX-mode . yas-minor-mode)
 
 (provide 'packages)
