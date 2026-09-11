@@ -1,13 +1,3 @@
-# Ignore everything in emacs config
-emacs/.emacs.d/*
+# Ignore (just type in file path / name)
 
-# Allow
-!emacs/.emacs.d/init.el
-!emacs/.emacs.d/keybinds.el
-!emacs/.emacs.d/appearances.el
-!emacs/.emacs.d/settings.el
-!emacs/.emacs.d/packages.el
-
-# Allow themes directory
-!emacs/.emacs.d/themes/
-!emacs/.emacs.d/themes/**
+# Allow (use !before path)
