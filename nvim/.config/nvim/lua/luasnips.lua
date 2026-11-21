@@ -1,12 +1,4 @@
 -- LuaSnip
-
-vim.pack.add({
-  {
-    src = "https://github.com/L3MON4D3/LuaSnip",
-    build = "make install_jsregexp",
-  },
-})
-
 local ls = require("luasnip")
 
 local s = ls.snippet
@@ -16,38 +8,6 @@ local d = ls.dynamic_node
 local sn = ls.snippet_node
 local rep = require("luasnip.extras").rep
 
-
--- Tab navigation
-
-local ls = require("luasnip")
-
-vim.keymap.set({ "i", "s" }, "<Tab>", function()
-  if ls.expand_or_jumpable() then
-    vim.schedule(function()
-      ls.expand_or_jump()
-    end)
-    return ""
-  end
-
-  return "<Tab>"
-end, {
-  expr = true,
-  silent = true,
-})
-
-vim.keymap.set({ "i", "s" }, "<S-Tab>", function()
-  if ls.jumpable(-1) then
-    vim.schedule(function()
-      ls.jump(-1)
-    end)
-    return ""
-  end
-
-  return "<S-Tab>"
-end, {
-  expr = true,
-  silent = true,
-})
 
 -- Helpers
 
@@ -61,7 +21,6 @@ end
 -- LaTeX snippets
 
 ls.add_snippets("tex", {
-
   s("template", {
     t({
       "\\documentclass[11pt]{article}",
@@ -69,28 +28,90 @@ ls.add_snippets("tex", {
       "\\usepackage[T1]{fontenc}",
       "\\usepackage[utf8]{inputenc}",
       "\\usepackage[english]{babel}",
-      "",
-      "\\usepackage{amsmath, amssymb, amsfonts}",
-      "\\usepackage{mathtools}",
-      "\\usepackage{bm}",
-      "",
-      "\\usepackage[a4paper, margin=1in]{geometry}",
       "\\usepackage{microtype}",
+      "\\usepackage{amsmath,amssymb,amsfonts,mathtools,bm}",
+      "\\usepackage[a4paper,margin=1in]{geometry}",
       "\\usepackage{parskip}",
+      "\\usepackage{xcolor,graphicx,enumitem}",
+      "\\usepackage[mmddyyyy]{datetime}",
+      "\\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}",
       "",
-      "\\usepackage{xcolor}",
-      "\\usepackage{graphicx}",
-      "\\usepackage{enumitem}",
+      "\\renewcommand{\\dateseparator}{/}",
+      "",
       "\\graphicspath{{images/}}",
       "",
-      "\\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue]{hyperref}",
+      "\\newcommand{\\notetitle}{NOTES}",
       "",
       "\\begin{document}",
       "",
-      "\\begin{center}",
-      "    {\\Large\\bfseries NOTES}\\\\[-2pt]",
-      "    {\\small today}",
-      "\\end{center}",
+      "\\begin{titlepage}",
+      "    \\centering",
+      "    \\vspace*{0.35\\textheight}",
+      "    \\resizebox{0.95\\textwidth}{!}{\\textbf{\\notetitle}}",
+      "    \\vspace*{\\fill}",
+      "\\end{titlepage}",
+      "",
+      "",
+      "\\end{document}",
+    }),
+  }),
+})
+
+
+ls.add_snippets("tex", {
+  s("labtemplate", {
+    t({
+      "\\documentclass[12pt]{article}",
+      "",
+      "\\usepackage[letterpaper, margin=0.8in]{geometry}",
+      "\\usepackage{amsmath, amssymb, amsthm}",
+      "\\usepackage{graphicx}",
+      "\\usepackage{booktabs}",
+      "\\usepackage{siunitx}",
+      "\\usepackage{float}",
+      "\\usepackage{caption}",
+      "\\usepackage{subcaption}",
+      "\\usepackage{hyperref}",
+      "\\usepackage[mmddyyyy]{datetime}",
+      "",
+      "\\renewcommand{\\dateseparator}{/}",
+      "",
+      "\\graphicspath{{images/}}",
+      "",
+      "\\setlength{\\parindent}{0pt}",
+      "\\setlength{\\parskip}{0.8em}",
+      "",
+      "\\hypersetup{",
+      "    colorlinks=true,",
+      "    linkcolor=blue,",
+      "    urlcolor=blue,",
+      "    citecolor=blue",
+      "}",
+      "",
+      "\\newcommand{\\school}{Stony Brook University}",
+      "\\newcommand{\\department}{Department of Physics and Astronomy}",
+      "\\newcommand{\\name}{Nelson Mei}",
+      "\\newcommand{\\ta}{Manas Choudhary}",
+      "\\newcommand{\\labsection}{PHY 252 L03}",
+      "\\newcommand{\\labtitle}{title}",
+      "\\newcommand{\\expdate}{date}",
+      "",
+      "\\begin{document}",
+      "",
+      "\\begin{titlepage}",
+      "  \\centering",
+      "  \\vspace*{-15mm}",
+      "  {\\Large\\textsc{\\school}}\\\\",
+      "  {\\Large\\textsc{\\department}}\\\\[10mm]",
+      "  {\\Large\\textsc{\\labsection}}",
+      "  \\vfill",
+      "  {\\Huge\\textbf{\\labtitle}}\\\\[8mm]",
+      "  {\\Large\\name}\\\\[10mm]",
+      "  {\\Large TA: \\ta}",
+      "  \\vfill",
+      "  {\\large Experiment Date: \\expdate}\\\\[2mm]",
+      "  {\\large Report Date: \\today}\\\\[8mm]",
+      "\\end{titlepage}",
       "",
     }),
 
@@ -101,7 +122,10 @@ ls.add_snippets("tex", {
       "\\end{document}",
     }),
   }),
+})
 
+
+ls.add_snippets("tex", {
 
   s("beg", {
     t("\\begin{"),
@@ -413,7 +437,7 @@ ls.add_snippets("tex", {
 
   s("fig", {
     t({
-      "\\begin{figure}[htpb]",
+      "\\begin{figure}[H]",
       "\t\\centering",
       "\t\\includegraphics[width=0.8\\textwidth]{",
     }),
@@ -452,9 +476,51 @@ ls.add_snippets("tex", {
 
 
   s("today", {
-    t(os.date("%m-%d-%Y")),
+    t(os.date("%m/%d/%Y")),
   }),
 
 
 
+})
+
+-- LuaSnip navigation for .tex files only
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "tex",
+  callback = function(args)
+    vim.keymap.set({ "i", "s" }, "<Tab>", function()
+      if ls.expand_or_jumpable() then
+        ls.expand_or_jump()
+        return
+      end
+
+      -- Insert a normal Tab without triggering this mapping again
+      vim.api.nvim_feedkeys(
+        vim.api.nvim_replace_termcodes("<Tab>", true, false, true),
+        "n",
+        false
+      )
+    end, {
+      buffer = args.buf,
+      silent = true,
+      desc = "LuaSnip expand or jump",
+    })
+
+    vim.keymap.set({ "i", "s" }, "<S-Tab>", function()
+      if ls.jumpable(-1) then
+        ls.jump(-1)
+        return
+      end
+
+      vim.api.nvim_feedkeys(
+        vim.api.nvim_replace_termcodes("<S-Tab>", true, false, true),
+        "n",
+        false
+      )
+    end, {
+      buffer = args.buf,
+      silent = true,
+      desc = "LuaSnip jump backward",
+    })
+  end,
 })

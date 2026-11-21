@@ -1,0 +1,50 @@
+@define-color black #000000;
+@define-color white #ffffff;
+@define-color grey #808080;
+@define-color charl-green #232b2b;
+@define-color charcoal #333333;
+
+* {
+        font-family: JetBrainsMono Nerd Font Propo;
+        font-size: 18px;
+}
+
+window#waybar {
+        background-color: @black;
+        color: #ffffff;
+}
+
+#workspaces button {
+	padding: 3px;
+	margin: 7px 0px 7px 7px;
+	background: none;
+	border-radius: 2px;
+	color: white;
+}
+
+#workspaces button.active {
+	background: @white;
+	color: @black;
+	font-weight: bold;
+}
+
+#workspaces button.urgent {
+	color: @white;
+	background: #e35149;
+}
+
+#battery,
+#bluetooth,
+#network,
+#memory,
+#layout,
+#pulseaudio,
+#backlight,
+#privacy,
+#idle_inhibitor,
+#tray {
+        border-radius: 8px;
+        padding: 5px 8px;
+        background: @charl-green;
+        margin: 5px 10px 5px 0px;
+}
